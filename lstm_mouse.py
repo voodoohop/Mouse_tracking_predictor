@@ -85,6 +85,7 @@ def generate_model(load_weights=False):
     model.add(Dense(2, activation='relu'))
     model.compile(loss='mse', optimizer='adam')
     if(load_weights==True): load_pretrained_weights()
+    model.save("lstm_mouse.hdf5")
     model_generated = True
 
 # Generator for data
